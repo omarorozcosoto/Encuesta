@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Encuesta de Satisfacción</h2>
+        <form action="submit.php" method="post">
+            <label>1. ¿Cómo calificaría nuestro servicio?</label><br>
+            <input type="radio" name="calificacion" value="excelente"> Excelente <br>
+            <input type="radio" name="calificacion" value="bueno"> Bueno <br>
+            <input type="radio" name="calificacion" value="regular"> Regular <br>
+            <input type="radio" name="calificacion" value="malo"> Malo <br><br>
+            
+            <label>2. ¿Qué aspecto podemos mejorar?</label><br>
+            <select name="mejora">
+                <option value="atencion">Atención al cliente</option>
+                <option value="tiempo">Tiempo de respuesta</option>
+                <option value="calidad">Calidad del servicio</option>
+                <option value="precio">Precio</option>
+            </select><br><br>
+            
+            <label>3. Comentarios adicionales:</label><br>
+            <textarea name="comentarios" rows="4" cols="50"></textarea><br><br>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
